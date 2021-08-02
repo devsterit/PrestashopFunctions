@@ -1,5 +1,9 @@
 <?php
 
+namespace Devster\Prestaservice;
+
+
+
 class PrestashopFunctions
 {
 
