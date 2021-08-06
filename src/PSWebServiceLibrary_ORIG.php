@@ -25,8 +25,7 @@
 * PrestaShop Webservice Library
 * @package PrestaShopWebservice
 */
-// NAMESPACE ADDED
-namespace Devster\Prestaservice;
+
 /**
  * @package PrestaShopWebservice
  */
@@ -407,6 +406,5 @@ class PrestaShopWebservice
 
 /**
  * @package PrestaShopWebservice
- * Class Exception is setted as absolute namespace
  */
-class PrestaShopWebserviceException extends \Exception { }
+class PrestaShopWebserviceException extends Exception { }

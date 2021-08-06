@@ -3,7 +3,8 @@
 namespace Devster\Prestaservice;
 
 
-use PrestaShopWebservice;
+// use PrestaShopWebservice;
+require_once 'PSWebServiceLibrary.php';
 
 
 class PrestashopFunctions
@@ -27,7 +28,7 @@ class PrestashopFunctions
 
 
 
-  public function updateOrderOnPrestashopWebSite( int $order_id, int $order_state ): void{
+  public function updateOrder( int $order_id, int $order_state ): void{
 
       try {
           // creating webservice access
@@ -42,7 +43,7 @@ class PrestashopFunctions
           // print_r( $xml );
 
           $orderFields = $xml->order->children();
-          $orderFields->current_state = $orderState;
+          $orderFields->current_state = $order_state;
           // print_r( $customerFields );
 
       	$updatedXml = $webService->edit([
@@ -56,7 +57,7 @@ class PrestashopFunctions
           // echo $response;
 
 
-      } catch ( PrestaShopWebserviceException $ex ) {
+      } catch ( \PrestaShopWebserviceException $ex ) {
           // Shows a message related to the error
           // echo 'Other error: <br />' . $ex->getMessage();
       }
@@ -68,7 +69,7 @@ class PrestashopFunctions
 
 
 
-  public function updateProduct( int $order_id, ara ): void{
+  public function updateProduct( int $order_id, Array $parameters ): void{
       try{
            $webService = new PrestaShopWebservice( $this->prestashop_url, $this->webservice_key, $this->debug );
            $opt        = array( 'resource' => 'products','id' => $id_presta );
