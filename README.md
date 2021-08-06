@@ -2,7 +2,10 @@
 
   Useful functions for Prestashop Webservice
 
-## MODIFICHE AL FILE PSWebServiceLibrary.php
+
+
+## MODIFICHE AL FILE *PSWebServiceLibrary.php*
+
 
   Attualmente PrestaShop ha alcuni problemi legati alla cattiva gestione dei namespace, causa il passaggio da una piattaforma in cui i file venivano gestiti esclusivamente tramite "include" e "require".
 
