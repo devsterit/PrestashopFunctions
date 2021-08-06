@@ -1,10 +1,17 @@
 <?php
 
+
 namespace Devster\Prestaservice;
 
 
-// use PrestaShopWebservice;
-require_once 'PSWebServiceLibrary.php';
+use Devster\Prestaservice\PrestaShopWebservice;
+use Devster\Prestaservice\PrestaShopWebserviceException;
+
+
+
+// Prima della suddivisione delle due classi contenute di PSWebServiceLibrary
+// in PrestaShopWebservice e PrestaShopWebserviceException per includere
+// la libreria ufficiale dovevo utilizzare "require_once 'PSWebServiceLibrary.php';"
 
 
 class PrestashopFunctions
